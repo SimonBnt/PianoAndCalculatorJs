@@ -30,7 +30,7 @@
                     <a href="" class="externLink" title="Lien vers mon profil Codepen" rel="noopener noreferrer" target="_blank"><img class="externLinkIcons" src="/assets/img/svg/codepen-black.svg" alt="Icone de Codepen"></a>
                     <a href="https://simonbenet.com/index.html" class="externLink"  title="Lien vers mon portefolio" rel="noopener noreferrer" target="_blank"><img class="externLinkIcons" src="/assets/img/svg/website.svg" alt="Icone de site web"></a>
                 </div>
-                <div>
+                <div id="myLink">
                     <p>Conçu et développé par <a href="https://simonbenet.com/index.html" title="Lien vers mon site officiel" rel="noopener noreferrer" target="_blank" ><strong>Simon Bénet</strong></a></p>
                 </div>
             </div>
@@ -48,29 +48,26 @@
                     <img src="/assets/img/svg/brain.svg" alt="brain svg" class="formLogo">
                 </div>
                 <div class="cardHeader">
-                    <h3 class="formTitle">Sign In</h3>
-                    <p class="formTxt">Please login to use platform</p>
+                    <h3 class="formTitle">Contact us</h3>
+                    <p class="formTxt">Please fill this form before submitting</p>
                 </div>
                 <form action="" class="form">
+                    <div class="formItem">
+                        <span class="itemIcon material-symbols-outlined">person</span>
+                        <input type="text" class="formInput" placeholder="Enter your full name" required>
+                    </div>
                     <div class="formItem">
                         <span class="itemIcon material-symbols-outlined">mail</span>
                         <input type="text" class="formInput" placeholder="Enter Email" required autofocus>
                     </div>
                     <div class="formItem">
-                        <span class="itemIcon material-symbols-outlined">lock</span>
-                        <input type="password" class="formInput" placeholder="Enter Password" required>
+                        <span class="itemIcon material-symbols-outlined">comment</span>
+                        <input type="text" class="formInput" placeholder="Your message" required autofocus>
                     </div>
-                    <div class="formItemOther">
-                        <div id="checkboxContainer">
-                            <input type="checkbox" id="remenberMeCheckbox">
-                            <label for="remenberMeCheckbox">Remember me</label>
-                        </div>
-                        <a href="#">I forgot my password !</a>
-                    </div>
-                    <button class="formBtn" type="submit">Sign In</button>
+                    <button class="formBtn" type="submit">SUBMIT</button>
                 </form>
                 <div class="formFooter" id="loginFooter">
-                    <span>Don't have an account ?</span><a href="#">Create a free account here !</a>
+                    <span></span>
                 </div>
             </div>
         </div>
@@ -130,8 +127,5 @@
 
  
     </main>
-    <!-- <footer>
-        
-    </footer> -->
 </body>
 </html>
