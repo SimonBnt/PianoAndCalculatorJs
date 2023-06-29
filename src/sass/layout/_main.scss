@@ -1,0 +1,61 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 2fr 6fr;
+    place-items: center;
+
+    h1 {
+        grid-column: 1/3;
+        grid-row: 1/3;
+        font-size: 2.5rem;
+        color: aliceblue;
+    }
+
+    #loginFormContainer {
+        grid-column: 1/2;
+        grid-row: 3/3;
+    }
+
+    #contactFormName {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    #loginFormName {
+        grid-column: 2/2;
+        grid-row: 2/3;
+    }
+
+    .formName {
+        font-size: 2rem;
+        color: rgb(221, 221, 221);
+    }
+
+    .formMainContainer {
+        width: 450px;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 4rem;
+        border-radius: 1rem;
+        position: relative;
+
+        .card::before {
+            content: "";
+            position: absolute;
+            background: rgba(255, 255, 255, .15);
+            inset: 0;
+            transform: rotate(-5deg);
+            z-index: -1;
+            border-radius: 1rem;
+        }
+        
+        .card {
+            .cardLogoContainer {
+                margin-bottom: 2rem;
+
+                .formLogo {
+                    width: 64px;
+                }
+            }
+        }
+    }
+}
