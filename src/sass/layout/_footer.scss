@@ -12,9 +12,14 @@ footer {
     @include respondTo(md) {
         padding-bottom: 1rem;
     }
-    
-    a {
-        color: #ffa149;
-        text-decoration: none;
+
+    p {
+        margin: 0 auto;
+        
+        a {
+            color: #ffa149;
+            text-decoration: none;
+        }
     }
+    
 }

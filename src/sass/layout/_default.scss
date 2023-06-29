@@ -1,6 +1,15 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    min-height: 100dvh;
-    background: linear-gradient(to right, #333, #fd7a00);
-    position: relative;
+html {
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        min-height: 100dvh;
+        background: linear-gradient(to right, #333, #fd7a00);
+        position: relative;
+        overflow-x: hidden;
+
+        @media (max-width: 768px) {
+            padding: 2rem 0;
+            padding-top: 0;
+        }
+    }
 }

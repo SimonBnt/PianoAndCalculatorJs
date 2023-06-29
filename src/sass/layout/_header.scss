@@ -1,7 +1,10 @@
 header {
     background-color: #1d1d1d;
     position: relative;
-    border-bottom: solid #ffa149 2px;
+
+    @include respondTo(md) {
+        border-bottom: solid #ffa149 2px;
+    }
 
     #logoContainer {
         display: flex;
