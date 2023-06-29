@@ -1,39 +1,24 @@
 main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 2fr 6fr;
+    grid-template-rows: 1fr 1fr 6fr;
     place-items: center;
 
     h1 {
         grid-column: 1/3;
-        grid-row: 1/3;
         font-size: 2.5rem;
-        color: aliceblue;
-    }
-
-    #loginFormContainer {
-        grid-column: 1/2;
-        grid-row: 3/3;
-    }
-
-    #contactFormName {
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
-
-    #loginFormName {
-        grid-column: 2/2;
-        grid-row: 2/3;
+        color: #1f1f1f;
     }
 
     .formName {
         font-size: 2rem;
-        color: rgb(221, 221, 221);
+        color: rgb(194, 194, 194);
     }
 
     .formMainContainer {
         width: 450px;
-        background: rgba(255, 255, 255, 0.5);
+        height: 600px;
+        background: rgba(255, 255, 255, 0.7);
         padding: 4rem;
         border-radius: 1rem;
         position: relative;
@@ -41,7 +26,7 @@ main {
         .card::before {
             content: "";
             position: absolute;
-            background: rgba(255, 255, 255, .15);
+            background: rgba(255, 255, 255, .25);
             inset: 0;
             transform: rotate(-5deg);
             z-index: -1;
@@ -56,6 +41,85 @@ main {
                     width: 64px;
                 }
             }
+
+            .cardLogoContainer, .cardHeader, .formFooter {
+                text-align: center;
+            }
+
+            .cardHeader {
+                margin-bottom: 2rem;
+
+                .formTitle {
+                    font-size: 2rem;
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                }
+
+                .formTitle + p {
+                    font-size: calc(1rem * 0.8);
+                    opacity: 0.8;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: #fd7a00;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+
+                .formItem {
+                    position: relative;
+
+                    .itemIcon {
+                        position: absolute;
+                        top: 1rem;
+                        left: 1rem;
+                        font-size: 1.5rem;
+                        opacity: .5;
+                    }
+                }
+
+                .formItemOther {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: calc(1rem * 0.8);
+                    margin-bottom: 0.5rem;
+
+                    #checkboxContainer {
+                        #remenberMeCheckbox {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                        }
+                    }
+                }
+            }
+
+            .formFooter {
+                margin-top: 1.5rem;
+                font-size: calc(1rem * 0.8);
+            }
+
+            input[type="text"], input[type="password"], input[type="email"] {
+                border: none;
+                outline: none;
+                background: rgba(255, 255, 255, 0.3);
+                padding: 1rem 1.5rem;
+                padding-left: calc(1rem * 3.5);
+                border-radius: 100px;
+                width: 100%;
+                transition: background 0.5s;
+            } 
+            
         }
     }
 }

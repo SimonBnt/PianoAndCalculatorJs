@@ -7,8 +7,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding-top: 1rem;
-    line-height: 2rem;
+    padding-top: 0.5rem;
     
     @include respondTo(md) {
         padding-bottom: 1rem;
