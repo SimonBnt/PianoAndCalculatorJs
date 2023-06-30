@@ -5,16 +5,20 @@ html {
         overflow: hidden;
         font-family: 'Poppins', sans-serif;
         min-height: 100dvh;
-        background: linear-gradient(to top, #333, #fd7a00);
+        background: linear-gradient(to top, #333, #ffa149);
         position: relative;
-            
-        @include respondTo(md) {
-            background: linear-gradient(to right, #333, #fd7a00);
+        padding-bottom: 8rem;
+        
+        @include respondTo(sm) {
+            padding-bottom: 12rem;
         }
 
-        @media (max-width: 768px) {
-            padding: 2rem 0;
-            padding-top: 0;
+        @include respondTo(md) {
+            background: linear-gradient(to right, #333, #ffa149);
+        }
+
+        @include respondTo(lg) {
+            padding-bottom: 0;
         }
     }
 }

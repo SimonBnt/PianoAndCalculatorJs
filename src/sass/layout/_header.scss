@@ -1,10 +1,40 @@
 header {
-    background-color: #1d1d1d;
+    background-color: #333;
     position: relative;
-    color: #ffa149;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: #fd7a00 solid 2px;
+    align-items: center;
+    
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 
-    @include respondTo(md) {
-        border-bottom: solid #ffa149 2px;
+    #logo {
+        width: 64px;
+        align-self: start;
+        margin-bottom: 1.5rem;
+        
+        @include respondTo(lg) {
+            margin-bottom: 0;
+        }
+    }
+
+    #h1Container {
+        h1 {
+            color: #fd7a00;
+            font-size: 1.5rem;
+
+            @media (max-width: 768px) {
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+
+            @include respondTo(md) {
+                font-size: 2rem;
+            }
+        }
     }
 
     #burgerMenuMainContainer {
@@ -88,7 +118,7 @@ header {
                 width: 48px;
                 height: 3px;
                 border-radius: 1rem;
-                background-color: #333;
+                background-color: white;
                 
                 @include respondTo(mobile) {
                     margin: 1rem;
@@ -106,7 +136,7 @@ header {
             right: -600px;
             width: fit-content;
             overflow: hidden;
-            background-color: #1d1d1d;
+            background-color: #333;
             border-left: solid #ffa149 2px;
             border-bottom: solid #ffa149 2px;
             z-index: 3000;
@@ -124,18 +154,12 @@ header {
                 gap: 0 2rem;
             }    
 
-            #h1Container {
-                h1 {
-                    @include respondTo(md) {
-                         font-size: 2.5rem;
-                         color: #fd7a00;
-                    }
-                }
-            }
-
             #myLink {
                 margin-bottom: 1rem;
                 padding: 1rem;
+                text-align: center;
+                 color: #ffa149;
+
 
                 @include respondTo(md) {
                     margin-bottom: 0;

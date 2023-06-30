@@ -24,7 +24,7 @@ main {
 
     .formName {
         font-size: 2rem;
-        color: rgb(221, 221, 221);
+        color: white;
         margin-top: 2rem;
     }
 
@@ -36,7 +36,7 @@ main {
         border-radius: 1rem;
         position: relative;
 
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             width: 280px;
             padding: 2rem;
         }
