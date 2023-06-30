@@ -7,7 +7,7 @@ html {
         min-height: 100dvh;
         background: linear-gradient(to top, #333, #ffa149);
         position: relative;
-        padding-bottom: 8rem;
+        padding-bottom: 10rem;
         
         @include respondTo(sm) {
             padding-bottom: 12rem;

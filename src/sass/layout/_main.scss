@@ -8,25 +8,70 @@ main {
     @include respondTo(md) {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 2fr 8fr;
+        grid-template-rows: 0.1fr 0.4fr 0.1fr 0.4fr;
     }
-    
-    
+
+    @include respondTo(lg) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: none;
+    }
 
     #contactFormName {
-        grid-row: 1/2;
+        grid-column: 1/2;
+        grid-row: 1;
     }
     
     #loginFormName {
-        grid-row: 1/2;
-
+        grid-column: 2/2;
+        grid-row: 1;
     }
+    
+    #signUpFormName {
+        grid-column: 1/2;
+        grid-row: 3;
+        margin-top: 8rem;
+        
+        @include respondTo(sm) {
+            margin-top: 10rem;
+        }
 
+        @include respondTo(md) {
+            margin-top: 0;
+        }
+        
+        @include respondTo(lg) {
+            margin-top: 2rem;
+            grid-column: 3;
+            grid-row: 1;
+        }
+    }
+    
     .formName {
         font-size: 2rem;
         color: white;
         margin-top: 2rem;
     }
+
+    #contactFormContainer {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    
+    #loginFormContainer {
+        grid-column: 2/2;
+        grid-row: 2/3;
+    }
+    
+    #signUpFormContainer {
+        grid-column: 1/2;
+        grid-row: 4/4;
+
+        @include respondTo(lg) {
+            grid-column: 3;
+            grid-row: 2;
+        }
+    }
+
 
     .formMainContainer {
         width: 450px;
@@ -39,6 +84,14 @@ main {
         @media (max-width: 767px) {
             width: 280px;
             padding: 2rem;
+        }
+
+        @include respondTo(lg) {
+            width: 400px;
+        }
+
+        @include respondTo(desktop1) {
+            width: 450px;
         }
 
         .card::before {
@@ -106,7 +159,36 @@ main {
                         top: 0.8rem;
                         left: 1rem;
                         font-size: 1.5rem;
-                        opacity: .5;
+                        opacity: 0.5;
+                    }
+
+                    .hideIcon {
+                        position: absolute;
+                        opacity: 0.5;
+                        top: 50%;
+                        right: 1rem;
+                        transform: translateY(-50%);
+                        font-size: 1rem;
+                        padding: 0.5rem;
+
+                        @include respondTo(md) {
+                            cursor: pointer;
+                        }
+                    }
+
+                    .showIcon {
+                        display: none;
+                        position: absolute;
+                        opacity: 0.5;
+                        top: 50%;
+                        right: 1rem;
+                        transform: translateY(-50%);
+                        font-size: 1rem;
+                        padding: 0.5rem;
+
+                        @include respondTo(md) {
+                            cursor: pointer;
+                        }
                     }
                 }
 
