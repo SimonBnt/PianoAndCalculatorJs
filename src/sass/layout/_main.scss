@@ -65,6 +65,7 @@ main {
     #signUpFormContainer {
         grid-column: 1/2;
         grid-row: 4/4;
+        height: 600px;
 
         @include respondTo(lg) {
             grid-column: 3;
