@@ -116,6 +116,13 @@ main {
 
                 .formLogo {
                     width: 64px;
+                    
+                    @include respondTo(md) {
+                        &:hover {
+                            transition-duration: 1.2s;
+                            transform: rotate(360deg);
+                        }
+                    }
                 }
             }
 
@@ -162,8 +169,9 @@ main {
                         font-size: 1.5rem;
                         opacity: 0.5;
                     }
-
+                    
                     .hideIcon {
+                        display: none;
                         position: absolute;
                         opacity: 0.5;
                         top: 50%;
@@ -171,14 +179,13 @@ main {
                         transform: translateY(-50%);
                         font-size: 1rem;
                         padding: 0.5rem;
-
+                        
                         @include respondTo(md) {
                             cursor: pointer;
                         }
                     }
-
+                    
                     .showIcon {
-                        display: none;
                         position: absolute;
                         opacity: 0.5;
                         top: 50%;
