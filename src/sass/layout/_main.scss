@@ -161,6 +161,9 @@ main {
 
                 .formItem {
                     position: relative;
+                    // display: flex;
+                    align-items: center;
+                    justify-content: center;
 
                     .itemIcon {
                         position: absolute;
@@ -187,16 +190,21 @@ main {
                     
                     .showIcon {
                         position: absolute;
-                        opacity: 0.5;
                         top: 50%;
                         right: 1rem;
                         transform: translateY(-50%);
-                        font-size: 1rem;
                         padding: 0.5rem;
+                        opacity: 0.5;
+                        font-size: 1rem;
 
                         @include respondTo(md) {
                             cursor: pointer;
                         }
+                    }
+
+                    .emailError, .nameError {
+                        margin-left: 1rem;
+                        font-size: 0.75rem;
                     }
                 }
 

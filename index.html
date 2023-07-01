@@ -15,9 +15,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet"> 
 
+    <!-- // ---- Fontawesome ---- // -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Js script -->
     <script src="/assets/js/burgerMenu.js" defer></script>
     <script src="/assets/js/showHidePassword.js" defer></script>
+    <script src="/assets/js/formValidation.js" defer></script>
 </head>
 <body>
     <header>
@@ -65,15 +69,18 @@
                 <form action="" class="form">
                     <div class="formItem">
                         <span class="itemIcon material-symbols-outlined">person</span>
-                        <input type="text" class="formInput" placeholder="Enter your full name" required>
+                        <input type="text" class="formInput nameInput" placeholder="Enter your full name" required>
+                        <p class="nameError"></p>
                     </div>
                     <div class="formItem">
                         <span class="itemIcon material-symbols-outlined">mail</span>
-                        <input type="text" class="formInput" placeholder="Enter Email" required autofocus>
+                        <input type="email" class="formInput" placeholder="Enter Email" required autofocus>
+                        <p class="emailError"></p>
                     </div>
                     <div class="formItem">
                         <span class="itemIcon material-symbols-outlined">comment</span>
-                        <input type="text" class="formInput" placeholder="Your message" required autofocus>
+                        <input type="text" class="formInput messageInput" placeholder="Your message" required autofocus>
+                        <p class="messageError"></p>
                     </div>
                     <button class="formBtn" type="submit">SUBMIT</button>
                 </form>
@@ -98,7 +105,8 @@
                 <form action="" class="form">
                     <div class="formItem">
                         <span class="itemIcon material-symbols-outlined">mail</span>
-                        <input type="text" class="formInput" placeholder="Enter Email" required autofocus>
+                        <input type="email" class="formInput" placeholder="Enter Email" required autofocus>
+                        <p class="emailError"></p>
                     </div>
                     <div class="formItem">
                         <span class="itemIcon material-symbols-outlined">lock</span>
@@ -153,7 +161,8 @@
                 <form action="" class="form">
                     <div class="formItem">
                         <span class="itemIcon material-symbols-outlined">mail</span>
-                        <input type="text" class="formInput" placeholder="Enter Email" required autofocus>
+                        <input type="email" class="formInput" placeholder="Enter Email" required autofocus>
+                        <p class="emailError"></p>
                     </div>
                     <div class="formItem">
                         <span class="itemIcon material-symbols-outlined">lock</span>
@@ -192,5 +201,8 @@
             </div>
         </div>
     </main>
+    <footer>
+        <div id="submitError"><p id="errorMessage"></p></div>
+    </footer>
 </body>
 </html>
