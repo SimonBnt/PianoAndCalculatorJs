@@ -1,9 +1,11 @@
 #calculator {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
+    grid-template-columns: repeat(4, 70px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    height: fit-content;
+    border: solid 2px #333;
     border-radius: 0.5rem;
-
+    
     #output {
         grid-column: 1 / -1;
         background-color: rgba(0, 0, 0, 0.75);
@@ -25,24 +27,37 @@
         }
     }
 
-    button {
-        font-size: 2rem;
-        border: solid 1px white;
-        outline: none;
-        background-color: rgba(255, 255, 255, 0.75);
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+    #btnContainer {
+        display: grid;
+        grid-template-columns: repeat(4, 70px);
         
-        @include respondTo(md) {
-            cursor: pointer;
+        button {
+            font-size: 1.5rem;
+            height: 100px;
+            border: solid 1px white;
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.75);
+            font-family:"Century Gothic";
             
-            &:hover {
-                background-color: rgba(255, 255, 255, 0.9);
+            @include respondTo(md) {
+                cursor: pointer;
+                
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.9);
+                }
+            }
+
+            &.borderLeft {
+                border-bottom-left-radius: 0.5rem;
+            }
+
+            &.borderRight {
+                border-bottom-right-radius: 0.5rem;
+            }
+
+            &.twoCol {
+                grid-column: span 2;
             }
         }
-    }
-
-    .twoCol {
-        grid-column: span 2;
     }
 }

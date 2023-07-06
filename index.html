@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/styles.min.css">
 
     <!-- google font  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <!-- // ---- Fontawesome ---- // -->
 
@@ -58,43 +59,115 @@
                     <div id="previousOperand" dataPreviousOperand></div>
                     <div id="currentOperand" dataCurrentOperand></div>
                 </div>
-                <button class="twoCol" dataClear>AC</button>
-                <button dataDelete>DEL</button>
-                <button dataOperation>÷</button>
-                <button dataNumber>1</button>
-                <button dataNumber>2</button>
-                <button dataNumber>3</button>
-                <button dataOperation>x</button>
-                <button dataNumber>4</button>
-                <button dataNumber>5</button>
-                <button dataNumber>6</button>
-                <button dataOperation>+</button>
-                <button dataNumber>7</button>
-                <button dataNumber>8</button>
-                <button dataNumber>9</button>
-                <button dataOperation>-</button>
-                <button dataNumber>.</button>
-                <button dataNumber>0</button>
-                <button class="twoCol" dataEquals>=</button>
+                <div id="btnContainer">
+                    <button class="twoCol" dataClear>AC</button>
+                    <button dataDelete>DEL</button>
+                    <button dataOperation>÷</button>
+                    <button dataNumber>1</button>
+                    <button dataNumber>2</button>
+                    <button dataNumber>3</button>
+                    <button dataOperation>x</button>
+                    <button dataNumber>4</button>
+                    <button dataNumber>5</button>
+                    <button dataNumber>6</button>
+                    <button dataOperation>+</button>
+                    <button dataNumber>7</button>
+                    <button dataNumber>8</button>
+                    <button dataNumber>9</button>
+                    <button dataOperation>-</button>
+                    <button dataNumber class="borderLeft">.</button>
+                    <button dataNumber>0</button>
+                    <button class="twoCol borderRight" dataEquals>=</button>
+                </div>    
             </div>
         </div>
         <div class="mainContainer">
             <div id="piano">
                 <div id="keys">
-                    <div class="key"></div>
-                    <div class="key blackKey"></div>
-                    <div class="key blackKey"></div>
-                    <div class="key"></div>
-                    <div class="key blackKey"></div>
-                    <div class="key blackKey"></div>
-                    <div class="key blackKey"></div>
-                    <div class="key"></div>
-                    <div class="key blackKey"></div>
-                    <div class="key blackKey"></div>
-                    <div class="key"></div>
-                    <div class="key blackKey"></div>
-                    <div class="key blackKey"></div>
-                    <div class="key blackKey"></div>
+                    <div class="key one">
+                        <div class="blackKeys">
+                            <div class="blackNoteContainer">
+                                <div class="note">Do#</div>
+                                <div class="noteEn">Reb</div>
+                            </div>
+                        </div>
+                        <div class="noteContainer">
+                            <div class="note">Do</div>
+                            <div class="noteEn">C</div>
+                        </div>
+                    </div>
+                    <div class="key">
+                        <div class="blackKeys">
+                            <div class="blackNoteContainer">
+                                <div class="note">Re#</div>
+                                <div class="noteEn">Mib</div>
+                            </div>
+                        </div>
+                        <div class="noteContainer">
+                            <div class="note">Re</div>
+                            <div class="noteEn">D</div>
+                        </div>
+                    </div>
+                    <div class="key three">
+                        <div class="noteContainer">
+                            <div class="note">Mi</div>
+                            <div class="noteEn">E</div>
+                        </div>
+                    </div>
+                    <div class="key four">
+                        <div class="blackKeys">
+                            <div class="blackNoteContainer">
+                                <div class="note">Fa#</div>
+                                <div class="noteEn">Solb</div>
+                            </div>
+                        </div>
+                        <div class="noteContainer">
+                            <div class="note">Fa</div>
+                            <div class="noteEn">F</div>
+                        </div>
+                    </div>
+                    <div class="key">
+                        <div class="blackKeys">
+                            <div class="blackNoteContainer">
+                                <div class="note">Sol#</div>
+                                <div class="noteEn">Lab</div>
+                            </div>
+                        </div>
+                        <div class="noteContainer">
+                            <div class="note">Sol</div>
+                            <div class="noteEn">G</div>
+                        </div>
+                    </div>
+                    <div class="key">
+                        <div class="blackKeys">
+                            <div class="blackNoteContainer">
+                                <div class="note">La#</div>
+                                <div class="noteEn">Sib</div>
+                            </div>
+                        </div>
+                        <div class="noteContainer">
+                            <div class="note">La</div>
+                            <div class="noteEn">A</div>
+                        </div>
+                    </div>
+                    <div class="key seven">
+                        <div class="noteContainer">
+                            <div class="note">Si</div>
+                            <div class="noteEn">B</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="keyboardContainer">
+                <span class="material-symbols-outlined">keyboard</span>
+                <div id="keysContainer">
+                    <span class="keys">s</span>
+                    <span class="keys">d</span>
+                    <span class="keys">f</span>
+                    <span class="keys">g</span>
+                    <span class="keys">h</span>
+                    <span class="keys">j</span>
+                    <span class="keys">k</span>
                 </div>
             </div>
         </div>
