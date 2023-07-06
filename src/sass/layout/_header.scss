@@ -1,0 +1,178 @@
+header {
+    background-color: #333;
+    position: relative;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: #fd7a00 solid 2px;
+    align-items: center;
+    
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    #logo {
+        width: 64px;
+        align-self: start;
+        margin-bottom: 1.5rem;
+        
+        @include respondTo(lg) {
+            margin-bottom: 0;
+        }
+    }
+
+    #h1Container {
+        h1 {
+            color: #fd7a00;
+            font-size: 1.5rem;
+
+            @media (max-width: 768px) {
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+
+            @include respondTo(md) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    #burgerMenuMainContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        #burgerMenuOpenerContainer {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            
+            @include respondTo(mobile) {
+                right: 0rem;
+                top: 0rem;
+            }
+    
+            @include respondTo(sm) {
+                right: 1rem;
+                top: 1rem;
+            }
+    
+            @include respondTo(md) {
+                display: none;
+            }
+            
+            .bgMenuBar {
+                margin: 0.5rem;
+                width: 48px;
+                height: 3px;
+                border-radius: 1rem;
+                background-color: white;
+                
+                @include respondTo(mobile) {
+                    margin: 1rem;
+                    width: 64px;
+                }
+            }
+        }
+    
+        #burgerMenuContentContainer {
+            display: grid;
+            gap: 1rem;
+            align-self: end;
+            position: absolute;
+            top: 0;
+            right: -600px;
+            width: fit-content;
+            overflow: hidden;
+            background-color: #333;
+            border-left: solid #ffa149 2px;
+            border-bottom: solid #ffa149 2px;
+            z-index: 3000;
+            transition: 0.6s;
+            
+            @include respondTo(md) {
+                display: flex;
+                place-items: center;
+                grid-template-rows: inherit;
+                position: inherit;
+                top: inherit;
+                right: inherit;
+                border: inherit;
+                height: inherit;
+                gap: 0 2rem;
+            }    
+
+            #myLink {
+                margin-bottom: 1rem;
+                padding: 1rem;
+                text-align: center;
+                 color: #ffa149;
+
+
+                @include respondTo(md) {
+                    margin-bottom: 0;
+                    padding: 0;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #ff7b00;
+                }
+            }
+    
+            #closeBurgerMenu {
+                color: #ff7b00;
+                font-weight: bolder;
+                font-size: 2.5rem;
+                justify-self: end;
+                margin: 1rem 1rem 0 0;
+    
+                @include respondTo(md) {
+                    display: none;
+                }
+            }
+    
+            #contactIconsContainer {
+                display: flex;
+                margin: 0 auto;
+                
+                .externLink {
+                    display: flex;
+                    place-content: center;
+                    margin: 1rem 0.5rem;
+                    background-color: #ff7b00;
+                    border-bottom: solid 2px black;
+                    border-right: solid 2px black;
+                    height: fit-content;
+                    width: fit-content;
+                    padding: 0.25rem;
+                    border-radius: 100%;
+    
+                    @include respondTo(md) {
+                        width: 32px;
+
+                        &:hover {
+                            border-bottom: solid 2px white;
+                            border-right: solid 2px white;
+                        }
+                    }
+                    
+                    .externLinkIcons {
+                        width: 24px;
+                        padding: 0;
+                        margin: 0;
+    
+                        @include respondTo(md) {
+                            width: 32px;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .hideBurgerMenu {
+            right: 0px !important;
+            transition: 0.6s;
+        }
+    }
+}
