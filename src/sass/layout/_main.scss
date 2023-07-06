@@ -1,0 +1,14 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    .mainContainer {
+        border: solid 1px red;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+}
