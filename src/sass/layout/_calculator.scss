@@ -1,0 +1,48 @@
+#calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    border-radius: 0.5rem;
+
+    #output {
+        grid-column: 1 / -1;
+        background-color: rgba(0, 0, 0, 0.75);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 1rem;
+        word-wrap: break-word;
+        word-break: break-all;
+
+        #previousOperand {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        #currentOperand {
+            color: white;
+            font-size: 2rem;
+        }
+    }
+
+    button {
+        font-size: 2rem;
+        border: solid 1px white;
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.75);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        
+        @include respondTo(md) {
+            cursor: pointer;
+            
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+        }
+    }
+
+    .twoCol {
+        grid-column: span 2;
+    }
+}

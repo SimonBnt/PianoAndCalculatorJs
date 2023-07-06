@@ -15,6 +15,7 @@
 
     <!-- Js script -->
     <script src="/assets/js/burgerMenu.js" defer></script>
+    <script src="/assets/js/calculator.js" defer></script>
 </head>
 <body>
     <header>
@@ -34,17 +35,70 @@
                     <p>Designed and developed by <a href="https://simonbenet.com/index.html" title="Link to my website" rel="noopener noreferrer" target="_blank" ><strong>Simon Bénet</strong></a></p>
                 </div>
                 <div id="contactIconsContainer">
-                    <a href="" class="externLink" rel="noopener noreferrer" target="_blank"><img class="externLinkIcons" title="Link to my Facebook profile" src="/assets/img/svg/facebook.svg" alt="Facebook icon"></a>
-                    <a href="" class="externLink" title="link to my Linkedin profile" rel="noopener noreferrer" target="_blank"><img class="externLinkIcons" src="/assets/img/svg/linkedin.svg" alt="Linkedin icon" rel="noopener noreferrer" target="_blank"></a>
-                    <a href="" class="externLink" title="link to my Instagram profile" rel="noopener noreferrer" target="_blank"><img class="externLinkIcons" src="/assets/img/svg/instagram.svg" alt="Instagram icon"></a>
-                    <a href="" class="externLink" title="Link to my Github profile" rel="noopener noreferrer" target="_blank"><img class="externLinkIcons" src="/assets/img/svg/github-black.svg" alt="Github icon"></a>
-                    <a href="" class="externLink" title="Link to my Codepen profile" rel="noopener noreferrer" target="_blank"><img class="externLinkIcons" src="/assets/img/svg/codepen-black.svg" alt="Codepen icon"></a>
+                        <!-- portfolio -->
                     <a href="https://simonbenet.com/index.html" class="externLink"  title="Link to my personal website" rel="noopener noreferrer" target="_blank"><img class="externLinkIcons" src="/assets/img/svg/website.svg" alt="Website icon"></a>
+                        <!-- linkedin -->
+                    <a href="https://www.linkedin.com/in/simon-b%C3%A9net/" class="externLink" title="link to my Linkedin profile" rel="noopener noreferrer" target="_blank"><img class="externLinkIcons" src="/assets/img/svg/linkedin.svg" alt="Linkedin icon" rel="noopener noreferrer" target="_blank"></a>
+                        <!-- github -->
+                    <a href="https://github.com/SimonBnt" class="externLink" title="Link to my Github profile" rel="noopener noreferrer" target="_blank"><img class="externLinkIcons" src="/assets/img/svg/github-black.svg" alt="Github icon"></a>
+                        <!-- codepen -->
+                    <a href="" class="externLink" title="Link to my Codepen profile" rel="noopener noreferrer" target="_blank"><img class="externLinkIcons" src="/assets/img/svg/codepen-black.svg" alt="Codepen icon"></a>
+                        <!-- facebook -->
+                    <a href="" class="externLink" rel="noopener noreferrer" target="_blank"><img class="externLinkIcons" title="Link to my Facebook profile" src="/assets/img/svg/facebook.svg" alt="Facebook icon"></a>
+                        <!-- instagram -->
+                    <a href="" class="externLink" title="link to my Instagram profile" rel="noopener noreferrer" target="_blank"><img class="externLinkIcons" src="/assets/img/svg/instagram.svg" alt="Instagram icon"></a>
                 </div>
             </div>
         </div>
     </header>
-    <main></main>
+    <main>
+        <div class="mainContainer">
+            <div id="calculator">
+                <div id="output">
+                    <div id="previousOperand" dataPreviousOperand></div>
+                    <div id="currentOperand" dataCurrentOperand></div>
+                </div>
+                <button class="twoCol" dataClear>AC</button>
+                <button dataDelete>DEL</button>
+                <button dataOperation>÷</button>
+                <button dataNumber>1</button>
+                <button dataNumber>2</button>
+                <button dataNumber>3</button>
+                <button dataOperation>x</button>
+                <button dataNumber>4</button>
+                <button dataNumber>5</button>
+                <button dataNumber>6</button>
+                <button dataOperation>+</button>
+                <button dataNumber>7</button>
+                <button dataNumber>8</button>
+                <button dataNumber>9</button>
+                <button dataOperation>-</button>
+                <button dataNumber>.</button>
+                <button dataNumber>0</button>
+                <button class="twoCol" dataEquals>=</button>
+            </div>
+        </div>
+        <div class="mainContainer">
+            <div id="piano">
+                <div id="keys">
+                    <div class="key"></div>
+                    <div class="key blackKey"></div>
+                    <div class="key blackKey"></div>
+                    <div class="key"></div>
+                    <div class="key blackKey"></div>
+                    <div class="key blackKey"></div>
+                    <div class="key blackKey"></div>
+                    <div class="key"></div>
+                    <div class="key blackKey"></div>
+                    <div class="key blackKey"></div>
+                    <div class="key"></div>
+                    <div class="key blackKey"></div>
+                    <div class="key blackKey"></div>
+                    <div class="key blackKey"></div>
+                </div>
+            </div>
+        </div>
+    </main>
     <footer></footer>
 </body>
 </html>
