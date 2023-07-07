@@ -11,9 +11,14 @@ main {
 
     .mainContainer {
         display: grid;
-        align-items: center;
-        justify-content: center;
+        place-items: center;
         margin: 2rem 1rem;
 
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #333;
+        }
     }
 }

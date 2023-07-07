@@ -3,8 +3,11 @@
     grid-template-columns: repeat(4, 70px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
     height: fit-content;
-    border: solid 2px #333;
     border-radius: 0.5rem;
+
+    @include respondTo(sm) {
+        grid-template-columns: repeat(4, 100px);
+    }
     
     #output {
         grid-column: 1 / -1;
@@ -16,6 +19,8 @@
         padding: 1rem;
         word-wrap: break-word;
         word-break: break-all;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
 
         #previousOperand {
             color: rgba(255, 255, 255, 0.75);
@@ -30,20 +35,23 @@
     #btnContainer {
         display: grid;
         grid-template-columns: repeat(4, 70px);
+
+        @include respondTo(sm) {
+            grid-template-columns: repeat(4, 100px);
+        }
         
         button {
             font-size: 1.5rem;
             height: 100px;
-            border: solid 1px white;
             outline: none;
-            background-color: rgba(255, 255, 255, 0.75);
+            background-color: rgba(255, 255, 255, 0.85);
             font-family:"Century Gothic";
             
             @include respondTo(md) {
                 cursor: pointer;
                 
                 &:hover {
-                    background-color: rgba(255, 255, 255, 0.9);
+                    background-color: rgba(255, 255, 255, 0.6);
                 }
             }
 

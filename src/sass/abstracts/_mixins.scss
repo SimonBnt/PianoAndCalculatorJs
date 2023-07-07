@@ -12,7 +12,7 @@
     }
 
     @if ($breakpoint == sm) {
-        @media (min-width: 768px) {
+        @media (min-width: 767px) {
             @content;
         }
     }
